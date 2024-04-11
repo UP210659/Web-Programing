@@ -29,7 +29,10 @@
                   class="form-control"
                   name="title"
                   id="title"
-                  placeholder="Write a task title" />
+                  placeholder="Task" 
+                  autofocus
+                  required
+                  />
               </div>
               <div class="mb-3">
                 <select class="form-select" name="users" id="users">
@@ -38,32 +41,30 @@
                 </select>
               </div>
               <div class="mb-3">
-                <textarea
-                  placeholder="Write a task's description"
-                  class="form-control"
-                  name="description"
-                  id="description"
-                  rows="8"></textarea>
+                COMPLETADA?
+                <input type="checkbox" name="completed" id="completed">
               </div>
-              <button type="submit" class="btn btn-primary w-100">Save</button>
+              <button type="submit" class=" btn btn-info btn-sm w-100" id="insert">
+                SAVE
+              </button>
             </form>
           </div>
         </article>
         <article class="col-8">
-          <table class="table table-dark table-hover">
+          <table class="table table-dark table-hover" id="tasks">
             <thead>
               <tr>
                 <th>ID</td>
                 <th>User</td>
                 <th>Title</td>
-                <th>Description</td>
+                <th>Task Completed</td>
                 <th>Action</td>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>1</td>
-                <td>Evenly</td>
+                <td>Rogelio</td>
                 <td>Some Title</td>
                 <td>Lorem ipsum dolor .</td>
                 <td>
@@ -91,13 +92,10 @@
               </tr>
             </tbody>
           </table>
-        </article><textarea
-          placeholder="Write a task's description"
-          class="form-control"
-          name="description"
-          id="description"
-          rows="8"></textarea>
-      </main>
-      <script type="module" src="/assets/js/app.js"></script>
-    </body>
-  </html>
+        </article>
+      </section>
+    </main>
+    <!-- <script type="module" src="/assets/js/requests.js"></script> -->
+    <script type="module" src="/assets/js/app.js"></script>
+  </body>
+</html>
